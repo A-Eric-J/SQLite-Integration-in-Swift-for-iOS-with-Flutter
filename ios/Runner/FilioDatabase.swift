@@ -31,4 +31,15 @@ class FilioDatabase {
             print("Failed to increment counter: \(error)")
         }
     }
+
+    func getCurrentCounter() -> Int {
+         do {
+             if let firstRow = try db?.pluck(filioTable) {
+                  return firstRow[counter]
+               }
+            } catch {
+                print("Failed to fetch counter: \(error)")
+            }
+            return 0
+        }
 }

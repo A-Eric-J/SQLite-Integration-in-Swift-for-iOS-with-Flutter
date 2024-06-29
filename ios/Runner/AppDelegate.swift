@@ -15,6 +15,9 @@ import SQLite
         if call.method == "incrementCounter" {
             FilioDatabase.shared.incrementCounter()
             result("Counter incremented")
+        } else if call.method == "getCurrentCounter" {
+            let currentCounter = FilioDatabase.shared.getCurrentCounter()
+            result(currentCounter)
         } else {
             result(FlutterMethodNotImplemented)
         }
@@ -22,5 +25,10 @@ import SQLite
 
     GeneratedPluginRegistrant.register(with: self)
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+  }
+
+// we are using applicationWillTerminate for when the app is terminated it incrementCounter the value
+  override func applicationWillTerminate(_ application: UIApplication) {
+    FilioDatabase.shared.incrementCounter()
   }
 }
