@@ -1,5 +1,6 @@
 import UIKit
 import Flutter
+import SQLite
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -12,7 +13,7 @@ import Flutter
                                                 binaryMessenger: controller.binaryMessenger)
     incrementChannel.setMethodCallHandler { (call: FlutterMethodCall, result: @escaping FlutterResult) in
         if call.method == "incrementCounter" {
-            DatabaseHelper.shared.incrementCounter()
+            FilioDatabase.shared.incrementCounter()
             result("Counter incremented")
         } else {
             result(FlutterMethodNotImplemented)

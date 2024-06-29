@@ -35,9 +35,10 @@ target 'Runner' do
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
   target 'RunnerTests' do
     inherit! :search_paths
-    pod 'SQLite.swift', '~> 0.12.2'
   end
+  pod 'SQLite.swift', '~> 0.12.2'
 end
+
 
 post_install do |installer|
   installer.pods_project.targets.each do |target|
