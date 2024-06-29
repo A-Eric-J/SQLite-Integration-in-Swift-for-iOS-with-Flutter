@@ -27,4 +27,10 @@ class FilioDatabase {
       },
     );
   }
+
+  Future<void> incrementCounter() async {
+    final db = await database;
+    await db.rawInsert("INSERT INTO filio_table (counter) VALUES (0)");
+    await db.rawUpdate("UPDATE filio_table SET counter = counter + 1 WHERE id = 1");
+  }
 }
