@@ -1,16 +1,23 @@
-# sqlite_in_swift_with_flutter
+# SQLite Counter with Flutter and Native iOS
 
-A new Flutter project.
+This project shows how to create a simple counter application using Flutter with a native iOS integration for SQLite database operations. The counter value is stored in a SQLite database, and it is incremented both from the Flutter app and when the iOS app is terminated.
+
+## Features
+
+- Increment the counter from the Flutter app.
+- Fetch and display the current counter value in the Flutter app.
+- Increment the counter when the iOS app is terminated.
+
+## Prerequisites
+
+- Flutter SDK
+- Xcode
+- CocoaPods
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+### 1. Clone the Repository
 
-A few resources to get you started if this is your first Flutter project:
+```sh
+git clone https://github.com/A-Eric-J/SQLite-Integration-in-Swift-for-iOS-with-Flutter.git
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
