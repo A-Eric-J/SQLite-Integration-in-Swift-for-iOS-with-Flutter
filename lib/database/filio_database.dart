@@ -1,6 +1,8 @@
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
 
+/// No need to use [FilioDatabase] in your app
+/// it is just to know how it works in Flutter
 class FilioDatabase {
   static final FilioDatabase _instance = FilioDatabase._internal();
   factory FilioDatabase() => _instance;
